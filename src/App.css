@@ -28,6 +28,7 @@
 
 .highlight100 > img{
   width: 2rem;
+  border-radius: 99px;
 }
 
 /* .monthTile :nth-child(1) {
@@ -40,4 +41,5 @@
 
 .monthTile > img {
   width: 2rem;
+  border-radius: 99px;
 }
