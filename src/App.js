@@ -1,8 +1,8 @@
 import "./App.css";
 import "react-calendar/dist/Calendar.css";
 
-import Button from '@mui/material/Button';
-import Input from '@mui/material/Input';
+import Button from "@mui/material/Button";
+import Input from "@mui/material/Input";
 
 import React, { useState } from "react";
 import Calendar from "react-calendar";
@@ -45,14 +45,15 @@ export default function App() {
   const tileContent = (date) => {
     if (birthday && date.view === "month") {
       let temp = convertDateToDaysLived(date);
-      let moonPhase = temp % 28;
-      const result = (
-        <>
-          <img src={`./moons/moon${moonPhase}.gif`} alt="" />
-          <span>{temp}</span>
-        </>
-      );
-      return result;
+      let moonPhase = temp % 27;
+      if (temp >= 0) {
+        return (
+          <>
+            <img src={`./moons/moon${moonPhase}.gif`} alt="" />
+            <span>{temp}</span>
+          </>
+        );
+      }
     }
   };
 
@@ -78,8 +79,8 @@ export default function App() {
 
   return (
     <div className="app">
-      <form className='app-form' type="submit" onSubmit={handleSubmit}>
-        <Input type="date" color='secondary' id="birthday" name="birthday" />
+      <form className="app-form" type="submit" onSubmit={handleSubmit}>
+        <Input type="date" color="secondary" id="birthday" name="birthday" />
         <Button type="submit">Moon Me</Button>
       </form>
       <Calendar
@@ -87,6 +88,8 @@ export default function App() {
         tileClassName={tileClassName}
         value={value}
         tileContent={tileContent}
+        minDate={birthday}
+        activeStartDate={birthday}
       />
     </div>
   );
