@@ -1,6 +1,9 @@
 import "./App.css";
 import "react-calendar/dist/Calendar.css";
 
+import Button from '@mui/material/Button';
+import Input from '@mui/material/Input';
+
 import React, { useState } from "react";
 import Calendar from "react-calendar";
 
@@ -77,8 +80,8 @@ export default function App() {
   return (
     <div className="app">
       <form className='app-form' type="submit" onSubmit={handleSubmit}>
-        <input type="date" id="birthday" name="birthday" />
-        <input type="submit" value="Moon me" />
+        <Input type="date" color='secondary' id="birthday" name="birthday" />
+        <Button type="submit">Moon Me</Button>
       </form>
       <Calendar
         onChange={onChange}
