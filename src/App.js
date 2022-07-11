@@ -53,7 +53,6 @@ export default function App() {
         </>
       );
       return result;
-      // let returnedString = temp % 100 !== 0 ?  ` ${temp} 🌅` :  ` ${temp} 🌕`
     }
   };
 
