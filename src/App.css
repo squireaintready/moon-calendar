@@ -1,38 +1,40 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  font-family: sans-serif;
+  background-color: rgb(31, 30, 33);
+  height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.app-form{
+  margin-bottom: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.react-calendar {
+  min-width: 25rem;
+  padding: 1rem;
+  background-color: beige !important;
+  border-radius: 4px !important;
+}
+
+.highlight100 {
+  color: forestgreen;
+}
+
+.highlight100 > img{
+  width: 2rem;
+}
+
+/* .monthTile :nth-child(1) {
+  color: blue;
+} */
+
+.monthTile > span {
+  color: rgb(21, 3, 140);
+}
+
+.monthTile > img {
+  width: 2rem;
 }
