@@ -46,12 +46,12 @@ export default function App() {
   // returns tileContent to be rendered
   const tileContent = (date) => {
     if (birthday && date.view === "month") {
-      let temp = convertDateToDaysLived(date);
-      let moonPhase = temp % 27;
-      if (temp >= 0) {
+      let result = convertDateToDaysLived(date);
+      let moonPhase = result % 27;
+      if (result >= 0) {
         return (
           <>
-            <span><br/>{temp}</span>
+            <span><br/>{result.toLocaleString("en-US")}</span>
             <img src={path + `/moons/moon${moonPhase}.gif`} alt="unavailable" />
           </>
         );
