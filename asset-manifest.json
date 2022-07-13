@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/moon-calendar/static/css/main.6113bd4d.css",
-    "main.js": "/moon-calendar/static/js/main.2d26a653.js",
+    "main.css": "/moon-calendar/static/css/main.e7bd611f.css",
+    "main.js": "/moon-calendar/static/js/main.719a0da8.js",
     "static/js/787.c1112931.chunk.js": "/moon-calendar/static/js/787.c1112931.chunk.js",
     "index.html": "/moon-calendar/index.html",
-    "main.6113bd4d.css.map": "/moon-calendar/static/css/main.6113bd4d.css.map",
-    "main.2d26a653.js.map": "/moon-calendar/static/js/main.2d26a653.js.map",
+    "main.e7bd611f.css.map": "/moon-calendar/static/css/main.e7bd611f.css.map",
+    "main.719a0da8.js.map": "/moon-calendar/static/js/main.719a0da8.js.map",
     "787.c1112931.chunk.js.map": "/moon-calendar/static/js/787.c1112931.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6113bd4d.css",
-    "static/js/main.2d26a653.js"
+    "static/css/main.e7bd611f.css",
+    "static/js/main.719a0da8.js"
   ]
 }
