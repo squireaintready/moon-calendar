@@ -83,7 +83,8 @@ export default function App() {
 
   return (
     <div className="app">
-      <h5>Count the days you've lived.</h5>
+      <h2>Count your days on earth.</h2>
+      <h4>Enter your birthday.</h4>
       <form className="app-form" type="submit" onSubmit={handleSubmit}>
         <Input type="date" color="secondary" value={inputValue} onChange={onInputChange} id="birthday" name="birthday" />
         <Button type="submit">Moon Me</Button>
