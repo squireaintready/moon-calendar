@@ -12,6 +12,7 @@ export default function App() {
   const LocalDate = JSJoda.LocalDate;
   const [birthday, setBirthday] = useState();
   const [value, setValue] = useState(new Date());
+  const [inputValue, setInputValue] = useState('');
 
   // converts date format to simple string
   const formatToEzString = (date) => {
@@ -41,6 +42,7 @@ export default function App() {
     return JSJoda.ChronoUnit.DAYS.between(start_date, end_date);
   }
 
+  let path = process.env.PUBLIC_URL;
   // returns tileContent to be rendered
   const tileContent = (date) => {
     if (birthday && date.view === "month") {
@@ -49,8 +51,8 @@ export default function App() {
       if (temp >= 0) {
         return (
           <>
-            <img src={`./moons/moon${moonPhase}.gif`} alt="" />
-            <span>{temp}</span>
+            <span><br/>{temp}</span>
+            <img src={path + `/moons/moon${moonPhase}.gif`} alt="image unavailable" />
           </>
         );
       }
@@ -70,18 +72,20 @@ export default function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setBirthday(new Date(e.target[0].value));
+    setBirthday(new Date(inputValue));
   };
 
   const onChange = (nextValue) => {
     setValue(nextValue);
   };
 
+  const onInputChange = (e) => {setInputValue(e.target.value)}
+
   return (
     <div className="app">
       <h5>Count the days you've lived.</h5>
       <form className="app-form" type="submit" onSubmit={handleSubmit}>
-        <Input type="date" color="secondary" id="birthday" name="birthday" />
+        <Input type="date" color="secondary" value={inputValue} onChange={onInputChange} id="birthday" name="birthday" />
         <Button type="submit">Moon Me</Button>
       </form>
       <Calendar
@@ -90,8 +94,9 @@ export default function App() {
         value={value}
         tileContent={tileContent}
         minDate={birthday}
-        activeStartDate={birthday}
+        // activeStartDate={birthday}
       />
+      
     </div>
   );
 }
