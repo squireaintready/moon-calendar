@@ -35,6 +35,10 @@
   color: blue;
 } */
 
+.monthTile{
+  border: 1px solid black !important;
+}
+
 .monthTile > span {
   color: rgb(21, 3, 140);
 }
