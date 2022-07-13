@@ -52,7 +52,7 @@ export default function App() {
         return (
           <>
             <span><br/>{temp}</span>
-            <img src={path + `/moons/moon${moonPhase}.gif`} alt="image unavailable" />
+            <img src={path + `/moons/moon${moonPhase}.gif`} alt="unavailable" />
           </>
         );
       }
