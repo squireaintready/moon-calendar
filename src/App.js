@@ -63,7 +63,7 @@ export default function App() {
   const tileClassName = (date) => {
     if (birthday && date.view === "month") {
       if (convertDateToDaysLived(date) % 100 === 0) {
-        return "highlight100";
+        return "monthTile highlight100";
       } else {
         return "monthTile";
       }
