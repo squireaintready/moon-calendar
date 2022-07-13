@@ -46,4 +46,5 @@
 .monthTile > img {
   width: 2rem;
   border-radius: 99px;
+  border: 4px solid whitesmoke;
 }
